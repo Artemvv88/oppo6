@@ -2,12 +2,24 @@
 #include <iostream>
 using namespace std;
 
-double my_pow(double x, unsigned int N)
+double my_pow(double x, int N)
 {
+    bool n = N < 0;
     double ans = 1;
-    for(int i = 1; i<=N; i++)
+    if (n)
     {
+        N *= -1;
+                for (int i = 0; i < N; i++)
+                {
+                    ans /= x;
+                 }
+    }
+    else
+    {
+        for(int i = 1; i<=N; i++)
+        {
         ans *= x;
+        }
     }
     return ans;
 }

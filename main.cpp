@@ -24,6 +24,7 @@ double my_pow(double x, int N)
     return ans;
 }
 
+
 int main()
 {
    double r, x;

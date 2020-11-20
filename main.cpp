@@ -2,14 +2,21 @@
 #include <iostream>
 using namespace std;
 
-double my_pow(double x, unsigned int N)
+double my_pow(double num, int deg)
 {
-    double ans = 1;
-    for(int i = 1; i<=N; i++)
-    {
-        ans *= x;
-    }
-    return ans;
+double result = 1;
+   while(deg) {
+       if (deg % 2 == 0) {
+           deg /= 2;
+           num *= num;
+       }
+       else {
+           deg--;
+           result *= num;
+       }
+   }
+
+   return result;
 }
 
 int main()
